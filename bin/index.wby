@@ -12,3 +12,5 @@ if abr {
     ctx.dispatch('/' + id + '.wby', {id});
     stop {};
 }
+
+throw('not found.');
