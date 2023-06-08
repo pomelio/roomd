@@ -1,0 +1,14 @@
+import ext.HttpContext as ctx;
+import ext.PathRegexp as pregexp;
+
+
+let ppath = ctx.path();
+
+let val2 = mod1.plus2(2);
+
+let abr = pregexp.match('/abc/:id', ppath);
+if abr {
+   let id = abr['params']['id'];
+    ctx.dispatch('/' + id + '.wby');
+    stop {};
+}
