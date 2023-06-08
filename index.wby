@@ -1,6 +1,6 @@
 import ext.HttpContext as ctx;
 import ext.PathRegexp as pregexp;
-import mod1 as mod1;
+import func.mod1 as mod1;
 
 let hostname = ctx.hostname();
 console('hostname:' + hostname);
