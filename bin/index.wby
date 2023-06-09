@@ -1,15 +1,16 @@
 import ext.HttpContext as ctx;
 import ext.PathRegexp as pregexp;
-
+import std.array as arr;
 
 let ppath = ctx.path();
 
 let val2 = mod1.plus2(2);
 
-let abr = pregexp.match('/abc/:id', ppath);
+let abr = pregexp.match('/abc(.)*', ppath);
 if abr {
-   let id = abr['params']['id'];
-    ctx.dispatch('/' + id + '.wby', {id});
+    let pp = abr['params']['0'];
+    pp = arr.slice(pp, 1).join('');
+    ctx.dispatch('/' + pp + '.wby', {});
     stop {};
 }
 
