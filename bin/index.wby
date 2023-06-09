@@ -1,16 +1,7 @@
 import ext.HttpContext as ctx;
-import ext.PathRegexp as pregexp;
-import std.array as arr;
 
-import hello as hello;
 
 let ppath = ctx.path();
 
-let abr = pregexp.match('/abc(.)*', ppath);
-if abr {
-    let pp = abr['params']['0'];
-    pp = arr.join('');
-    ctx.dispatch(pp, {});
-}
+ctx.dispatch(ppath, {});
 
-throw('not found.');
