@@ -6,10 +6,11 @@ import hello as hello;
 
 let ppath = ctx.path();
 
-let abr = pregexp.match('/abc/hello', ppath);
+let abr = pregexp.match('/abc(.)*', ppath);
 if abr {
-    hello.handle(ctx);
-    stop {};
+    let pp = abr['params']['0'];
+    pp = arr.join('');
+    ctx.dispatch(pp, {});
 }
 
 throw('not found.');
