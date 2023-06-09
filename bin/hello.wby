@@ -1,2 +1,3 @@
-
-ctx.body('hello world!');
+func handle(ctx) {
+  ctx.body('hello world!');
+}
