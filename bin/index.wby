@@ -4,8 +4,6 @@ import std.array as arr;
 
 let ppath = ctx.path();
 
-let val2 = mod1.plus2(2);
-
 let abr = pregexp.match('/abc(.)*', ppath);
 if abr {
     let pp = abr['params']['0'];
