@@ -6,7 +6,7 @@ import hello as hello;
 
 let ppath = ctx.path();
 
-let abr = pregexp.match('/abc(.)*', ppath);
+let abr = pregexp.match('/abc/hello', ppath);
 if abr {
     let pp = abr['params']['0'];
     pp = arr.join('');
