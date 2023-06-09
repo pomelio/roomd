@@ -8,7 +8,7 @@ let abr = pregexp.match('/abc(.)*', ppath);
 if abr {
     let pp = abr['params']['0'];
     pp = arr.join('');
-    ctx.dispatch(pp + '.wby', {});
+    ctx.dispatch(pp, {});
     stop {};
 }
 
