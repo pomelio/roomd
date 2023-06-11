@@ -1,5 +1,6 @@
 import plus1 as plus1;
 
 let i = plus1.plus1(2);
+info('i:' + i);
 ctx.body('hello world! ' + i);
 
