@@ -11,7 +11,7 @@ c: {
 d: 'dddd'
 };
 
-let b = stringify(a);
+let b = stringify_json(a);
 info(b);
 ctx.body('b: ' + b);
 
