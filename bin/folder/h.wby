@@ -9,7 +9,7 @@ c: {
   b:[1,2,3],
 }
 c: 'dddd'
-}
+};
 
 let b = stringify(a);
 info(b);
