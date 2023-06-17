@@ -11,8 +11,10 @@ c: {
 d: 'dddd'
 };
 
+ii = 0;
+
 let b = stringify(a);
 info(b);
-ii = 0;
+
 ctx.body('b: ' + b);
 
