@@ -2,10 +2,12 @@ import ext.HttpContext as ctx;
 import ext.Showdown as sd;
 import ext.Showdown as shd;
 import std.string as str;
+import ext.mustache as mch;
 
 let ppath = ctx.path();
 let docPath = str.substring(ppath, 1);
-let md = shd.makeHtml(docPath);
+let content = shd.makeHtml(docPath);
+let html = mch.render('docs/ref/layout.mustache');
 
-ctx.body(md);
+ctx.body(html);
 
