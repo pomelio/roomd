@@ -1,7 +1,14 @@
 import ext.HttpContext as ctx;
+import std.string as str;
 
 
 let ppath = ctx.path();
 
-ctx.dispatch(ppath, {});
+if str.starts_with(ppath, '/docs') {
+  ctx.dispatch('/markdown', {});
+} else {
+  ctx.dispatch(ppath, {});
+}
+
+
 
