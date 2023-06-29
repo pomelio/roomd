@@ -3,8 +3,8 @@ import ext.Showdown as sd;
 import ext.Showdown as shd;
 
 let ppath = ctx.path();
-
-let md = shd.makeHtml(ppath);
+let docPath = ppath.substring(1);
+let md = shd.makeHtml(docPath);
 
 ctx.body(md);
 
