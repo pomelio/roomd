@@ -6,5 +6,5 @@ let ppath = ctx.path();
 
 let md = shd.makeHtml(ppath);
 
-ctx.body = md;
+ctx['body'] = md;
 
