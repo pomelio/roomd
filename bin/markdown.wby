@@ -1,9 +1,10 @@
 import ext.HttpContext as ctx;
 import ext.Showdown as sd;
 import ext.Showdown as shd;
+import std.string as str;
 
 let ppath = ctx.path();
-let docPath = ppath.substring(1);
+let docPath = str.substring(ppath, 1);
 let md = shd.makeHtml(docPath);
 
 ctx.body(md);
