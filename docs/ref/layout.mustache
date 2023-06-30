@@ -1,7 +1,26 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-   <script src="./sidebar.js"></script>
+
+
+<script>
+$(function() {
+  $.getJSON('./side_bar.json', (data, status) => {
+    let title = data.title;
+    let sections = data.sections;
+    let href = window.location.href;
+    let sectionEles = sections.map(s => {
+      if (!href.endsWith(s.md)) {
+        return '<li>' + s.title + '</li'>;
+      } else {
+        return '<li class="current">' + s.title + '</li'>;
+      }
+    });
+    let html = '<div class="sections"><h2>' + title +'</h2><ul>' + sectionEles.join('') + '</ul></div>';
+    $('#sidebar').html(html);
+  });
+});
+</script>
 
 <style>
 #outer-container {
