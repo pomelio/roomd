@@ -1,0 +1,13 @@
+{
+  "title": "sections",
+  "sections":[
+    {
+      "title": "cover page",
+      "md": "/docs/ref/coverpage.md"
+    },
+    {
+      "title": "variables",
+      "md": "/docs/ref/variables.md"
+    }
+  ]
+}
