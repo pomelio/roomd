@@ -1,0 +1,9 @@
+import ex.DownloadDocs as dd;
+import ext.HttpContext as ctx;
+import std.string as str;
+
+let ppath = ctx.path();
+let docPath = str.substring(ppath, 1);
+let content = dd.downloadDoc(docPath);
+
+ctx.body(content);
