@@ -9,7 +9,7 @@
 	height: 100%;
 }
 
-#sidebar {
+#root {
 	display: table-cell;
 	width: 15%;
 	vertical-align: top;
@@ -29,10 +29,12 @@
 
 
   </head>
-  <body id="outer-container ">
-    <div id="sidebar" id="root"></div>
-    <div id="content">
-      <p>{{{content}}}</p>
+  <body>
+    <div id="outer-container">
+      <div id="root"></div>
+      <div id="content">
+        <p>{{{content}}}</p>
+      </div>
     </div>
      <script defer="defer" src="./sidebar.js"></script>
   </body>
