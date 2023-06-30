@@ -2,15 +2,36 @@
   <head>
     <link rel="stylesheet" href="https://markdowncss.github.io/air/css/air.css">
 
+<style>
+#outer-container {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#sidebar {
+	display: table-cell;
+	width: 15%;
+	vertical-align: top;
+}
+
+#content {
+	display: table-cell;
+	width: 85%;
+	vertical-align: top;
+}
+
+</style>
+
     
 
 
 
 
   </head>
-  <body>
-    <div class="sidebar" id="root"></div>
-    <div class="content">
+  <body id="outer-container ">
+    <div id="sidebar" id="root"></div>
+    <div id="content">
       <p>{{{content}}}</p>
     </div>
      <script defer="defer" src="./sidebar.js"></script>
