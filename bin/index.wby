@@ -6,7 +6,7 @@ let ppath = ctx.path();
 
 if str.ends_with(ppath, '.md') {
   ctx.dispatch('/markdown', {});
-} elsif str.starts_with(ppath. '/docs') {
+} elsif str.starts_with(ppath, '/docs') {
   ctx.download('/download', {});
 } else {
   ctx.dispatch(ppath, {});
