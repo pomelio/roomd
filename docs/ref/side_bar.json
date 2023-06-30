@@ -8,6 +8,62 @@
     {
       "title": "variables",
       "md": "/docs/ref/variables.md"
-    }
+    },
+    {
+      "title": "expression",
+      "md": "/docs/ref/expression.md"
+    },
+    {
+      "title": "statements",
+      "md": "/docs/ref/statements.md"
+    },
+    {
+      "title": "modules",
+      "md": "/docs/ref/modules.md"
+    },
+    {
+      "title": "std libraries",
+      "md": "/docs/ref/std_global.md"
+    },
+    {
+      "title": "array",
+      "md": "/docs/ref/std_array.md"
+    },
+    {
+      "title": "string",
+      "md": "/docs/ref/std_string.md"
+    },
+    {
+      "title": "date",
+      "md": "/docs/ref/std_date.md"
+    },
+    {
+      "title": "number",
+      "md": "/docs/ref/std_number.md"
+    },
+    {
+      "title": "math",
+      "md": "/docs/ref/std_math.md"
+    },
+    {
+      "title": "extensions",
+      "md": "/docs/ref/ext_http_context.md"
+    },
+    {
+      "title": "pathregex",
+      "md": "/docs/ref/ext_path_regexp.md"
+    },
+    {
+      "title": "mysql",
+      "md": "/docs/ref/ext_mysql.md"
+    },
+    {
+      "title": "mustache",
+      "md": "/docs/ref/ext_mustache.md"
+    },
+    {
+      "title": "showdown",
+      "md": "/docs/ref/ext_showdown.md"
+    },
   ]
 }
