@@ -1,5 +1,5 @@
 $(function() {
-  $.getJSON('./sidebar.json', (data, status) => {
+  $.getJSON('./side_bar.json', (data, status) => {
     let title = data.title;
     let sections = data.sections;
     let href = window.location.href;
