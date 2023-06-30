@@ -4,8 +4,10 @@ import std.string as str;
 
 let ppath = ctx.path();
 
-if str.starts_with(ppath, '/docs') {
+if str.ends_with(ppath, '.md') {
   ctx.dispatch('/markdown', {});
+} else if str.starts_with(ppath. '/docs') {
+  ctx.download('/download', {});
 } else {
   ctx.dispatch(ppath, {});
 }
