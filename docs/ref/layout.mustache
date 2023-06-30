@@ -11,7 +11,7 @@ $(function() {
     let href = window.location.href;
     let sectionEles = sections.map(s => {
       if (!href.endsWith(s.md)) {
-        return '<li><a href="' + s.md + '"> + s.title + '</a></li>';
+        return '<li><a href="' + s.md + '">' + s.title + '</a></li>';
       } else {
         return '<li class="current">' + s.title + '</li>';
       }
