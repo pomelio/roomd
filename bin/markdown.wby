@@ -1,5 +1,4 @@
 import ext.HttpContext as ctx;
-import ext.Showdown as sd;
 import ext.Showdown as shd;
 import std.string as str;
 import ext.mustache as mch;
