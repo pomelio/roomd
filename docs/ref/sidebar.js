@@ -1,5 +1,5 @@
 $(function() {
-  $.getJSON('./side_bar.json', (data, status) => {
+  $.getJSON('https://raw.githubusercontent.com/pomelio/roomd/main/docs/ref/side_bar.json', (data, status) => {
     let title = data.title;
     let sections = data.sections;
     let href = window.location.href;
