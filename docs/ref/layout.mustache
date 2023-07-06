@@ -17,9 +17,9 @@ function composeSection(section){
   });
   let secEle = null;
   if (!href.endsWith(section.md)) {
-    secEle = '<div class="section"><h2><a href="' + section.md + '">' + section.title + '</a></h2><ul>' + topicEles.join('') + '</ul></div>';
+    secEle = '<div class="section"><h3><a href="' + section.md + '">' + section.title + '</a></h3><ul>' + topicEles.join('') + '</ul></div>';
   } else {
-    secEle = '<div class="section"><h2>' + section.title + '</h2><ul>' + topicEles.join('') + '</ul></div>';
+    secEle = '<div class="section"><h3>' + section.title + '</h3><ul>' + topicEles.join('') + '</ul></div>';
   }
   return secEle;
   
