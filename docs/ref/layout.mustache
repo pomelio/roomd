@@ -4,19 +4,36 @@
 
 
 <script>
+
+let href = window.location.href;
+
+function composeSection(section){
+  let topicEles = section.topics.map(topic => {
+    if (!href.endsWith(topic.md)) {
+      return '<li><a href="' + topic.md + '">' + topic.title + '</a></li>';
+    } else {
+      return '<li>' + topic.title + '</li>';
+    }
+  });
+  let section = null;
+  if (!href.endsWith(section.md)) {
+    section = '<div class="section"><h2><a href="' + section.md + '">' + section.title + '</a></h2><ul>' + topicEles.join('') + '</ul></div>';
+  } else {
+    section = '<div class="section"><h2>' + section.title + '</h2><ul>' + topicEles.join('') + '</ul></div>';
+  }
+  return section;
+  
+}
+
+
 $(function() {
   $.getJSON('https://raw.githubusercontent.com/pomelio/roomd/main/docs/ref/side_bar.json', (data, status) => {
     let title = data.title;
     let sections = data.sections;
-    let href = window.location.href;
     let sectionEles = sections.map(s => {
-      if (!href.endsWith(s.md)) {
-        return '<li><a href="' + s.md + '">' + s.title + '</a></li>';
-      } else {
-        return '<li class="current">' + s.title + '</li>';
-      }
+      return composeSection(s);
     });
-    let html = '<div class="sections"><h2>' + title +'</h2><ul>' + sectionEles.join('') + '</ul></div>';
+    let html = '<div class="sections"><h2>' + title +'</h2>' + sectionEles.join('') + '</div>';
     $('#sidebar').html(html);
   });
 });
