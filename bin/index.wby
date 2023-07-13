@@ -4,6 +4,10 @@ import std.string as str;
 
 let ppath = ctx.path();
 
+if ppath == '' {
+  ppath = '/docs/ref/grammer.md';
+}
+
 if str.ends_with(ppath, '.md') {
   ctx.dispatch('/markdown', {});
 } elsif str.starts_with(ppath, '/docs') {
