@@ -1,3 +1,0 @@
-fn plus1(value) {
-  return value + 1;
-}
