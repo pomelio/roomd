@@ -4,7 +4,7 @@ import std.string as str;
 
 let ppath = ctx.path();
 
-if ppath == '' {
+if ppath == '/' {
   ppath = '/docs/ref/grammer.md';
 }
 
