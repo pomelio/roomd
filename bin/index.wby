@@ -10,8 +10,6 @@ if ppath == '/' {
 
 if str.ends_with(ppath, '.md') {
   ctx.dispatch('/markdown', {});
-} elsif str.starts_with(ppath, '/docs') {
-  ctx.dispatch('/download', {});
 } else {
   ctx.dispatch(ppath, {});
 }
