@@ -4,6 +4,9 @@ import std.string as str;
 import ext.mustache as mch;
 
 let ppath = ctx.path();
+if ppath == '/' {
+  ppath = '/docs/ref/grammer.md';
+}
 let docPath = str.substring(ppath, 1);
 let content = shd.makeHtml(docPath);
 let html = mch.render('docs/ref/layout.mustache');
