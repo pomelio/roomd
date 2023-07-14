@@ -7,9 +7,9 @@ let ppath = ctx.path();
 if ppath == '/' {
   ppath = '/docs/ref/grammer.md';
 }
-let docPath = str.substring(ppath, 1);
-let content = shd.makeHtml(docPath);
-let html = mch.render('docs/ref/layout.mustache');
+
+let content = shd.makeHtml(ppath);
+let html = mch.render('/docs/ref/layout.mustache');
 
 ctx.body(html);
 
